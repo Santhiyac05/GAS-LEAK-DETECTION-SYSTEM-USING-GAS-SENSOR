@@ -10,6 +10,7 @@
   Gas sensor (MQ-2)
 	
 ## Circuit Diagram:
+<img width="973" height="576" alt="image" src="https://github.com/user-attachments/assets/b65610b7-aa84-4a8a-98e5-4ba2f1601166" />
 
  
 
@@ -57,6 +58,7 @@ Step 7: Save Your Work
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Program:
+
 
 ## Output:
 
