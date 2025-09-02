@@ -10,6 +10,7 @@
   Gas sensor (MQ-2)
 	
 ## Circuit Diagram:
+<img width="1001" height="633" alt="image" src="https://github.com/user-attachments/assets/72ad1fb5-6281-4099-9b07-2501911c78f5" />
 
  
 
@@ -57,10 +58,42 @@ Step 7: Save Your Work
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Program:
+int led = 8; 
+const int numReadings = 10; 
+int gasSensor = A4; 
+void setup()
+{
+ pinMode(gasSensor, INPUT); 
+ pinMode(led, OUTPUT); 
+
+ Serial.begin(9600);
+  }
+void loop()
+{
+ long total = 0;
+ 
+ for (int i = 0; i < numReadings; i++) {
+ total += analogRead(gasSensor);
+ delay(10); 
+ }
+ int averageSensorValue = total / numReadings;
+ Serial.println(averageSensorValue); 
+
+ if (averageSensorValue > 300)
+ {
+ digitalWrite(led, HIGH); 
+ } else
+ {
+ digitalWrite(led, LOW); 
+ }
+ delay(1000); 
+}
 
 ## Output:
+<img width="1166" height="756" alt="image" src="https://github.com/user-attachments/assets/9d2f2124-28bd-462f-9259-cfa69df1c52b" />
 
    
 
 ## Result:
+GAS LEAK DETECTION SYSTEM USING GAS SENSOR TINKERCAD EXECUTED SUCCESSfully.
 
