@@ -58,7 +58,7 @@ Step 7: Save Your Work
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Program:
-'''
+--
 int led = 8; 
 const int numReadings = 10; 
 int gasSensor = A4; 
@@ -89,7 +89,7 @@ void loop()
  }
  delay(1000); 
 }
-'''
+--
 
 
 ## Output:
