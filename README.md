@@ -69,27 +69,36 @@ void setup()
 
 {
  pinMode(gasSensor, INPUT); 
+ 
  pinMode(led, OUTPUT); 
 
  Serial.begin(9600);
   }
+  
 void loop()
 {
  long total = 0;
  
  for (int i = 0; i < numReadings; i++) {
+ 
  total += analogRead(gasSensor);
- delay(10); 
+ 
+ delay(10);
+ 
  }
  int averageSensorValue = total / numReadings;
+ 
  Serial.println(averageSensorValue); 
 
  if (averageSensorValue > 300)
  {
  digitalWrite(led, HIGH); 
+ 
  } else
+ 
  {
  digitalWrite(led, LOW); 
+ 
  }
  delay(1000); 
 }
