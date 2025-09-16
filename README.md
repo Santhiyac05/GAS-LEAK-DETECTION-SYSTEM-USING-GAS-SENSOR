@@ -58,11 +58,46 @@ Step 7: Save Your Work
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Program:
+int led = 8; 
+const int numReadings = 10; 
+int gasSensor = A4; 
+void setup()
+{
+ pinMode(gasSensor, INPUT); 
+ pinMode(led, OUTPUT); 
+
+ Serial.begin(9600);
+  }
+void loop()
+{
+ long total = 0;
+ 
+ for (int i = 0; i < numReadings; i++) {
+ total += analogRead(gasSensor);
+ delay(10); 
+ }
+ int averageSensorValue = total / numReadings;
+ Serial.println(averageSensorValue); 
+
+ if (averageSensorValue > 300)
+ {
+ digitalWrite(led, HIGH); 
+ } else
+ {
+ digitalWrite(led, LOW); 
+ }
+ delay(1000); 
+}
 
 
 ## Output:
 
+<img width="1323" height="910" alt="image" src="https://github.com/user-attachments/assets/c7e70cfc-5cea-4c0d-b897-539c2869a1e8" />
+
+
    
 
 ## Result:
+Thus the gas leak detection system using gas sensor was successfully developed
+
 
