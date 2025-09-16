@@ -6,7 +6,7 @@
 ## Hardware / Software Tools required:
 	PC/ Laptop with Internet connection
   Tinker CAD tool (Online)
-	Arduino UNO Board/ESP-32
+  Arduino UNO Board/ESP-32
   Gas sensor (MQ-2)
 	
 ## Circuit Diagram:
@@ -60,9 +60,13 @@ Step 7: Save Your Work
 ## Program:
 --
 int led = 8; 
+
 const int numReadings = 10; 
-int gasSensor = A4; 
+
+int gasSensor = A4;
+
 void setup()
+
 {
  pinMode(gasSensor, INPUT); 
  pinMode(led, OUTPUT); 
@@ -89,7 +93,7 @@ void loop()
  }
  delay(1000); 
 }
---
+
 
 
 ## Output:
